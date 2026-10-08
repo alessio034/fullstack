@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre Guanacaste | Pura Vida</title>
+  <meta name="description" content="Guía turística de Guanacaste, Costa Rica: playas, volcanes, aventura, cultura sabanera y gastronomía.">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sol: '#F59E0B',
+            mar: '#0E7490',
+            selva: '#166534',
+            arena: '#FEF3C7',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#inicio" class="flex items-center gap-2 font-display text-2xl font-extrabold text-mar">
+        <span class="text-sol">☀</span> Guanacaste
+      </a>
+
+      <ul id="menu" class="hidden md:flex items-center gap-8 font-medium">
+        <li><a href="#destinos" class="hover:text-mar transition">Destinos</a></li>
+        <li><a href="#actividades" class="hover:text-mar transition">Actividades</a></li>
+        <li><a href="#cultura" class="hover:text-mar transition">Cultura</a></li>
+        <li><a href="#galeria" class="hover:text-mar transition">Galería</a></li>
+        <li><a href="#contacto" class="bg-sol text-white px-5 py-2 rounded-full hover:bg-amber-600 transition">Reservar</a></li>
+      </ul>
+
+      <button id="btnMenu" class="md:hidden text-3xl text-mar" aria-label="Abrir menú">☰</button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <ul id="menuMovil" class="hidden md:hidden flex-col gap-4 px-6 pb-6 bg-white font-medium">
+      <li><a href="#destinos" class="block py-2">Destinos</a></li>
+      <li><a href="#actividades" class="block py-2">Actividades</a></li>
+      <li><a href="#cultura" class="block py-2">Cultura</a></li>
+      <li><a href="#galeria" class="block py-2">Galería</a></li>
+      <li><a href="#contacto" class="block py-2 text-sol font-semibold">Reservar</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="relative h-screen flex items-center justify-center text-center text-white">
+    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1920&q=80"
+         alt="Playa tropical al atardecer" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
+
+    <div class="relative z-10 px-4 max-w-3xl">
+      <p class="uppercase tracking-[0.3em] text-sol font-semibold mb-4">Costa Rica</p>
+      <h1 class="font-display text-5xl sm:text-7xl font-extrabold mb-6">Descubre Guanacaste</h1>
+      <p class="text-lg sm:text-xl text-gray-100 mb-10">
+        Playas de arena dorada, volcanes activos, bosques secos y la auténtica tradición sabanera.
+        Vive el <span class="text-sol font-semibold">Pura Vida</span> en la provincia más soleada del país.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#destinos" class="bg-sol hover:bg-amber-600 px-8 py-3 rounded-full font-semibold transition">Explorar destinos</a>
+        <a href="#contacto" class="border-2 border-white hover:bg-white hover:text-mar px-8 py-3 rounded-full font-semibold transition">Planear mi viaje</a>
+      </div>
+    </div>
+
+    <a href="#datos" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-3xl" aria-label="Bajar">↓</a>
+  </section>
+
+  <!-- Datos rápidos -->
+  <section id="datos" class="bg-mar text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="font-display text-4xl font-extrabold text-sol">300+</p>
+        <p class="text-sm uppercase tracking-wide">Días de sol al año</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-extrabold text-sol">60+</p>
+        <p class="text-sm uppercase tracking-wide">Playas</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-extrabold text-sol">3</p>
+        <p class="text-sm uppercase tracking-wide">Parques nacionales icónicos</p>
+      </div>
+      <div>
+        <p class="font-display text-4xl font-extrabold text-sol">1</p>
+        <p class="text-sm uppercase tracking-wide">Zona Azul de longevidad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinos -->
+  <section id="destinos" class="py-24 bg-arena/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-mar mb-4">Destinos imperdibles</h2>
+        <p class="max-w-2xl mx-auto text-gray-600">Desde el Pacífico hasta las faldas del volcán, cada rincón de Guanacaste guarda una experiencia única.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card -->
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Playa Tamarindo"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-sol">Playa</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Tamarindo</h3>
+            <p class="text-gray-600 text-sm">Capital del surf, vida nocturna y atardeceres espectaculares sobre el Pacífico.</p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1580094333632-438bdc04f79f?auto=format&fit=crop&w=800&q=80" alt="Volcán Rincón de la Vieja"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-selva">Volcán</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Rincón de la Vieja</h3>
+            <p class="text-gray-600 text-sm">Pailas de barro, aguas termales, cataratas y senderos en un parque nacional activo.</p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Playa Conchal"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-sol">Playa</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Playa Conchal</h3>
+            <p class="text-gray-600 text-sm">Arena formada por millones de conchas trituradas y aguas turquesa ideales para snorkel.</p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80" alt="Parque Nacional Santa Rosa"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-selva">Naturaleza</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Parque Nacional Santa Rosa</h3>
+            <p class="text-gray-600 text-sm">Bosque seco tropical, historia nacional y la legendaria ola de Roca Bruja.</p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?auto=format&fit=crop&w=800&q=80" alt="Playa Hermosa"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-sol">Playa</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Golfo de Papagayo</h3>
+            <p class="text-gray-600 text-sm">Bahías tranquilas, resorts de lujo y buceo con mantarrayas y tortugas.</p>
+          </div>
+        </article>
+
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+          <div class="overflow-hidden h-56">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Nosara"
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold uppercase text-mar">Bienestar</span>
+            <h3 class="font-display text-2xl font-bold mt-1 mb-2">Nosara y Sámara</h3>
+            <p class="text-gray-600 text-sm">Yoga, surf suave y la tranquilidad de la Zona Azul de Nicoya.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actividades -->
+  <section id="actividades" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-mar mb-4">¿Qué hacer?</h2>
+        <p class="max-w-2xl mx-auto text-gray-600">Aventura, relajación y naturaleza en un solo destino.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition text-center">
+          <div class="text-5xl mb-4">🏄</div>
+          <h3 class="font-semibold text-lg mb-2">Surf</h3>
+          <p class="text-sm text-gray-600">Olas para principiantes y expertos durante todo el año.</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition text-center">
+          <div class="text-5xl mb-4">🌋</div>
+          <h3 class="font-semibold text-lg mb-2">Canopy y senderismo</h3>
+          <p class="text-sm text-gray-600">Vuela sobre el bosque y camina junto a fumarolas volcánicas.</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition text-center">
+          <div class="text-5xl mb-4">🐢</div>
+          <h3 class="font-semibold text-lg mb-2">Desove de tortugas</h3>
+          <p class="text-sm text-gray-600">Observa tortugas baula y lora en Playa Grande y Ostional.</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-gray-100 shadow-sm hover:-translate-y-2 hover:shadow-xl transition text-center">
+          <div class="text-5xl mb-4">🤿</div>
+          <h3 class="font-semibold text-lg mb-2">Buceo y snorkel</h3>
+          <p class="text-sm text-gray-600">Islas Catalinas y Murciélago con vida marina abundante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cultura -->
+  <section id="cultura" class="py-24 bg-selva text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+      <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=1000&q=80"
+           alt="Paisaje sabanero" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+      <div>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold mb-6">Tierra sabanera</h2>
+        <p class="text-green-100 mb-6">
+          Guanacaste es cuna del folclore costarricense: la marimba, el baile típico, las corridas de toros a la tica
+          y el orgullo del sabanero. Cada 25 de julio se celebra la <strong class="text-sol">Anexión del Partido de Nicoya</strong>.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex gap-3"><span class="text-sol text-xl">✔</span> Gastronomía: rosquillas, tanelas, arroz de maíz y chorreadas.</li>
+          <li class="flex gap-3"><span class="text-sol text-xl">✔</span> Cerámica chorotega en Guaitil, tradición de miles de años.</li>
+          <li class="flex gap-3"><span class="text-sol text-xl">✔</span> Fiestas patronales con topes, música y bombas.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-mar text-center mb-16">Galería</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img class="rounded-xl h-48 md:h-64 w-full object-cover hover:opacity-80 transition md:col-span-2 md:row-span-2 md:h-full"
+             src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1000&q=80" alt="Atardecer en la playa">
+        <img class="rounded-xl h-48 md:h-64 w-full object-cover hover:opacity-80 transition"
+             src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80" alt="Surfista">
+        <img class="rounded-xl h-48 md:h-64 w-full object-cover hover:opacity-80 transition"
+             src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=600&q=80" alt="Tortuga marina">
+        <img class="rounded-xl h-48 md:h-64 w-full object-cover hover:opacity-80 transition"
+             src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&q=80" alt="Catarata">
+        <img class="rounded-xl h-48 md:h-64 w-full object-cover hover:opacity-80 transition"
+             src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=600&q=80" alt="Montañas y lago">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto / Reservas -->
+  <section id="contacto" class="py-24 bg-arena/40">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-3xl shadow-xl p-8 sm:p-12">
+        <h2 class="font-display text-4xl font-extrabold text-mar text-center mb-2">Planea tu viaje</h2>
+        <p class="text-center text-gray-600 mb-10">Déjanos tus datos y te enviaremos un itinerario personalizado.</p>
+
+        <form id="formReserva" class="grid sm:grid-cols-2 gap-6">
+          <div class="sm:col-span-1">
+            <label for="nombre" class="block text-sm font-semibold mb-1">Nombre</label>
+            <input id="nombre" type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mar">
+          </div>
+          <div class="sm:col-span-1">
+            <label for="correo" class="block text-sm font-semibold mb-1">Correo</label>
+            <input id="correo" type="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mar">
+          </div>
+          <div>
+            <label for="fecha" class="block text-sm font-semibold mb-1">Fecha de llegada</label>
+            <input id="fecha" type="date" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mar">
+          </div>
+          <div>
+            <label for="interes" class="block text-sm font-semibold mb-1">Interés principal</label>
+            <select id="interes" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mar">
+              <option>Playas</option>
+              <option>Aventura</option>
+              <option>Naturaleza</option>
+              <option>Cultura</option>
+              <option>Bienestar</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="mensaje" class="block text-sm font-semibold mb-1">Mensaje</label>
+            <textarea id="mensaje" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-mar"></textarea>
+          </div>
+          <button type="submit" class="sm:col-span-2 bg-sol hover:bg-amber-600 text-white font-semibold py-4 rounded-full transition">
+            Enviar solicitud
+          </button>
+          <p id="msgOk" class="hidden sm:col-span-2 text-center text-selva font-semibold">¡Gracias! Pronto te contactaremos. ¡Pura Vida! 🌴</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="font-display text-2xl font-extrabold text-white mb-3"><span class="text-sol">☀</span> Guanacaste</p>
+        <p class="text-sm">Tu guía para descubrir la provincia más soleada de Costa Rica.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Enlaces</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#destinos" class="hover:text-sol">Destinos</a></li>
+          <li><a href="#actividades" class="hover:text-sol">Actividades</a></li>
+          <li><a href="#cultura" class="hover:text-sol">Cultura</a></li>
+          <li><a href="#contacto" class="hover:text-sol">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Cómo llegar</h4>
+        <p class="text-sm">Aeropuerto Internacional Daniel Oduber Quirós (LIR), Liberia, Guanacaste.</p>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 text-center text-xs py-6">
+      © <span id="anio"></span> Descubre Guanacaste. Hecho con Tailwind CSS.
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil
+    const btnMenu = document.getElementById('btnMenu');
+    const menuMovil = document.getElementById('menuMovil');
+    btnMenu.addEventListener('click', () => {
+      menuMovil.classList.toggle('hidden');
+      menuMovil.classList.toggle('flex');
+    });
+    menuMovil.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        menuMovil.classList.add('hidden');
+        menuMovil.classList.remove('flex');
+      })
+    );
+
+    // Formulario (demo)
+    document.getElementById('formReserva').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('msgOk').classList.remove('hidden');
+      e.target.reset();
+    });
+
+    // Año actual
+    document.getElementById('anio').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
